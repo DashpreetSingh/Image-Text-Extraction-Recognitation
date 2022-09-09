@@ -66,8 +66,8 @@ for detection in pan_card:
     top_left = tuple(detection[0][0])
     bottom_right = tuple(detection[0][2])
     text = detection[1]
-    img = cv2.rectangle(img,top_left,bottom_right,(0,255,0),3)
-    img = cv2.putText(img,text,(20,spacer), font, 0.5,(0,255,0),2,cv2.LINE_AA)
+    img = cv2.rectangle(img,top_left,bottom_right,(0,255,0),3) #in this line we set the image, starting_point, end_point, and in last we set BGR.
+    img = cv2.putText(img,text,(20,spacer), font, 0.5,(0,255,0),2,cv2.LINE_AA)  #cv2.putText is used to draw a text string on any image 
     spacer+=15
 plt.figure(figsize=(10,10))
 plt.imshow(img)
